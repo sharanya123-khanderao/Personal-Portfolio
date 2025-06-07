@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23CEz/5paNdF+TmFE5o5z5l5f5O5f5N3b5it" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Ensure this link is correct -->
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    
+     <script src="script.js"></script>
+
+</head>
+<body>
+
+    
+    <header class="header" >
+        <div class="top-layer">
+            <div class="name">
+                <h1>SHARANYA</h1>
+            </div>
+            <div class="navigation">
+                <!-- Hamburger Menu Icon for small screens -->
+                
+                <button class="hamburger" aria-label="Open navigation menu">&#9776;</button>
+           
+                <!-- Navigation List -->
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <div class="about-section">
+        <div class="about-left">
+            <div class="profile-card">
+                <div class="profile-pic">
+                    <!-- Place profile pic here -->
+                    <img src="profile_pic.jpeg" alt="Sharanya" class="profile-image">
+                </div>
+                
+                    <div class="profile-details">
+                        <h2>Venkata Naga Sharanya Khande Rao</h2>
+                        <p class="role">Data Science Grad Student From UMBC</p>
+                
+                    
+                </div>
+            </div>
+            <div class="social-icons">
+                <!-- Social media icons and links -->
+                <a href="https://www.linkedin.com/in/sharanya-khanderao-189205193/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sharanya123-khanderao" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/sharanya_khanderao/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="about-right" id="about">
+            <div class="greeting">
+                <h1>Hello;</h1>
+                <p>Here's who I am & what I do</p>
+                <button class="resume-button" onclick="redirectToResume()">Resume</button>
+                <button class="projects-button" onclick="scrollToProjects()">Projects</button>
+                <p class="description">I'm a student pursuing Computer Science Engineering at Matrusri Engineering College. I have completed a few web development and machine language projects. I am passionate about learning new technologies and exploring their potential to solve real-world problems.</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+    
+    <!-- Experience Section -->
+<section class="section"  id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <span class="job-duration">Jan 2023 - Apr 2023</span>
+        <div class="timeline-content">
+          <h3 class="job-title">Data Analyst Intern </h3>
+          <p class="company-name">Shop sync India Pt ltd </p>
+          <p class="job-description">As an intern I Created a real-time sales dashboard, reducing manual reporting by 30% and increasing data
+           accuracy by 20%. Automated data pipelines using Python and SQL, resulting in a reduction in report generation time and Designed interactive Tableau dashboards that visualized over 15 key performance indicators, leading to a
+           significant increase in operational efficiency and immediate decision-making capabilities across sales and inventory management.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <span class="job-duration">May 2022 - Aug 2022</span>
+        <div class="timeline-content">
+          <h3 class="job-title">Software Engineer Intern </h3>
+          <p class="company-name">Iniesta Webtech solution private limited </p>
+          <p class="job-description"> Developed a hotel booking website with a responsive front-end (HTML, CSS, JavaScript) and a robust back
+           end using Django for user authentication, bookings, and database management, Engineered MySQL relational databases, cutting query response times by 30% through query
+           optimization and indexing strategies, creating a more efficient and user-friendly hotel booking experience.</p>
+        </div>
+      </div>
+      <!-- Add more timeline items as needed -->
+       <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <span class="job-duration">May 2021 - Nov 2021</span>
+        <div class="timeline-content">
+          <h3 class="job-title">Teaching Assistant for Data Structures and Algorithms in Python  </h3>
+          <p class="company-name">Coding Ninjas </p>
+          <p class="job-description">  Established a data-driven methodology leveraging student performance data to pinpoint prevalent misunderstandings
+           of Data Structures and Algorithms among 1,000+ students, enhancing comprehension scores and learning outcomes, Analyzed student learning patterns across 1,000+ learners using machine learning techniques to predict knowledge gaps,
+           enabling preemptive intervention and improving overall course satisfaction based on student feedback.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  
+    
+ 
+<!-- Education Section -->
+<!-- Education Section -->
+<section class="section" id="education" >
+    <h2>Education</h2>
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item">
+        <span class="course-duration">Aug 2023 - May 2025</span>
+        <div class="timeline-content">
+          <h3 class="course-name">Master of Science in Data Science</h3>
+          <p class="university-name">University of Maryland, Baltimore County</p>
+          <p class="job-description">Graduated with a Master’s in Data Science from the University of Maryland, Baltimore County (UMBC), achieving a perfect 4.0 GPA. I’ve developed strong proficiency in Python, SQL, and R, and have hands-on experience in machine learning, big data processing, data engineering, and healthcare analytics. The program emphasized both the technical and ethical aspects of data science, equipping me to lead data-driven solutions across diverse industries.</p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+     <!-- <div class="timeline-item">
+        <span class="course-duration">2014 - 2016</span>
+        <div class="timeline-content">
+          <h3 class="course-name">Master of Science in Software Engineering</h3>
+          <p class="university-name">University of ABC</p>
+          <p class="course-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      Add more timeline items as needed -->
+     <div class="timeline-item">
+        <span class="course-duration"> Aug 2019 - June 2023</span>
+        <div class="timeline-content">
+          <h3 class="course-name">Bachelor of Engineering in Electrical and Electronics Engineering</h3>
+          <p class="university-name">Osmania University</p>
+          <p class="course-description">CGPA : 8.16/10</p>
+        </div>
+      </div>
+    </div>         -->
+  </section>
+  
+  
+  
+
+  
+
+
+ <section class="skills-section section" id="skills">
+    <h2>Skills</h2>
+    <div class="container">
+        
+        <div class="skills-list">
+            <!-- Coding skills -->
+            <div class="skill-category">
+                <h3>Coding</h3>
+                <div class="skill">
+                    <span>HTML/5</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>C</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>CPP</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>R</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Data Structures And Algorithms</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Flask</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>ReactJs</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Node. Js</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                
+                
+               
+                <!-- More coding skills here -->
+            </div>
+
+            <!-- Languages and Tools/Others -->
+            <div class="right-column">
+                <!-- Language skills -->
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill">
+                        <span>Microsoft Power Automate</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Microsoft Power Agent</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>VS Code</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Jupyter Notebook</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Sublime Text</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Pycharm</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <!-- More language skills here -->
+                </div>
+                <!-- Tools and others -->
+                <div class="skill-category tools-others">
+                    <h3>Frameworks</h3>
+                    <div class="skill">
+                        <span>Github / Gitlab</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Scikit</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>OpenCV</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>NumPy</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <!-- More tools and other skills here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <img src="Project1.png" alt="Project 1">
+                    <h3>Personalized Healthcare Recommendation system for ICU patients</h3>
+                    <p>The Personalized Healthcare Recommendation System for ICU Patients is designed to assist clinical decision-making through predictive modeling of patient outcomes in the intensive care unit. Using the MIMIC-III 10K dataset, we integrated structured data—including demographics,vitals, and diagnosis code with unstructured clinical notes to build three predictive modules: (1) ICU Admission Prediction, (2) Length-of-Stay (LOS) Estimation, and (3) Risk-Level
+                     Classification.The preprocessing pipeline involved filtering for adult patients, handling missing values, and applying one-hot encoding for categorical variables. We computed summary statistics for time-varying signals and created clinically relevant features. For risk classification, class imbalance was addressed using SMOTE. Clinical notes were processed using TF-IDF and topic modeling via Latent Dirichlet Allocation (LDA), enriching the structured data features.Models including Logistic Regression, Random Forest, and XGBoost were trained to predict patient outcomes. Cross-validation was used to evaluate model generalizability. The risk classification model achieved an average F1-score of approximately 0.40, highlighting moderate predictive performance on this challenging task. Topic patterns extracted from clinical notes provided additional interpretability. While current performance shows room for improvement, this project demonstrates the feasibility of combining multimodal ICU data to generate patient-specific recommendations.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <img src="Project2.png" alt="Project 2">
+                    <h3>Uber for hire vehicles in NYC</h3>  
+                <p>Executed an in-depth exploratory data analysis of Uber's ride-sharing data, identifying 15 high-demand zones and trip characteristics that informed strategic decisions, ultimately enhancing operational efficiency by 25%. Created a comprehensive framework for identifying trip patterns, which led to enhancements in route optimization; the initiative resulted in a 15% reduction in customer wait times and refined user satisfaction</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <img src="project3.png" alt="Project 3">
+                    <h3>Anti money laundering </h3>
+                    <p>Directed a Graph Neural Network (GNN) using the PyG library to process large transaction datasets and engineer features, achieving 97% accuracy in detecting suspicious accounts for anti-money laundering efforts. Trained the model to identify suspicious patterns in account activity, contributing to enhanced financial security and improved detection accuracy.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <img src="project4.png" alt="Project 4">
+                    <h3>Analysis of civilian complaint review</h3>
+                    <p>Conducted a comprehensive data cleaning process on Civilian Complaint Review Board datasets, resulting in a 40% reduction in data inconsistencies and improving the accuracy of predictive models for future complaints. Spearheaded the application of Logistic Regression, Random Forest, and XGBoost to model complaint data, generating actionable insights that projected a 25% increase in complaint resolution effectiveness for police departments.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="project-card">
+                    <img src="project5.png" alt="Project 4">
+                    <h3>implementation of voice and gesture control to a smart adaptive vehicle</h3>
+                    <p>The main aim of this project is to implement voice and gesture control applications to a smart adaptive vehicle which can be helpful for blind and hand-disabled individuals to travel from one place to another. The v3 microphone module is used to record voice commands to send to an Arduino uno microcontroller. For gesture control operation, gyroscope is used to send input commands which are helpful for those who cannot speak. This vehicle can perform various operations viz., forward, backward, left, right, wake-up and shut-down.</p>
+                </div>
+            </div>
+          
+            <!-- Repeat for other projects -->
+        </div>
+        <!-- If you want navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+
+     
+    <!-- Contact Section -->
+ 
+ 
+<section class="contact-form-section contact" id="contact">
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mleyvoyw" method="POST">
+            <div class="form-group">
+                
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+      <button class="scroll-to-top" id="scrollToTop">&#8593;</button>
+
+    <footer class="footer">
+        <p>&copy; 2023 Your CV. All rights reserved.</p>
+    </footer>
+
+    
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Ensure this script tag comes after the Swiper JS -->
+<script src="script.js"></script>
+<!-- Your script file -->
+
+    
+</body>
+</html>
