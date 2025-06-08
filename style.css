@@ -1,0 +1,1461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #111;
+    color: #ccc;
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+}
+
+/* Header and Navigation */
+.hamburger {
+    display: none; /* Initially hidden for larger screens */
+    font-size: 2.5rem; /* Icon size */
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+
+.name {
+    font-size: 2.25rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 1rem;
+    color: #3498db;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)); /* Update the background */
+    position: absolute; /* Update the positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    margin: 0 1.5rem;
+}
+
+.nav-list li a {
+    font-size: 1.4rem; /* Adjusted font size */
+    color: #ccc; /* Set appropriate color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list li a:hover {
+    color: #f39c12;
+    border-bottom-color: #f39c12;
+}
+
+.active-nav-link {
+    color: #f39c12 !important;
+    border-bottom-color: #f39c12 !important;
+}
+
+/* Header */
+.header {
+    position: relative;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+}
+
+.top-layer {
+   
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem; /* Less padding for a tighter top bar */
+    /* Retaining your color */
+}
+
+.name-role {
+    color: #f39c12;
+    font-size: 2.5rem; /* Slightly smaller to fit new structure */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 1.5rem;
+}
+
+.navigation a {
+    font-size: 1.4rem; /* Adjusted font size */
+    color: #f39c12; /* Set appropriate color */
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #e74c3c;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    
+}
+
+
+.about-left {
+    flex: 1; /* This allows the item to grow */
+     /* Your chosen color */
+     background-color: #f39c12;
+    padding: 2rem; /* Padding inside the box */
+    border-radius: 15px; /* Rounded corners */
+    position: relative; /* Allows absolute positioning relative to this container */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    text-align: center; /* Centers text */
+     /* Adds space below the container */
+    /* height: 100%; Remove this line if it's causing issues */
+    /* Add this if you want the box to grow with content */
+    min-height: 30px; /* Minimum height */
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+/* Additional styles for responsive adjustments */
+@media (max-width: 768px) { /* Adjust to your breakpoint needs */
+    .about-left {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 1rem; /* Less space on smaller screens */
+        padding: 1rem; /* Adjust padding */
+        min-height: auto; /* Let the height be automatic on small screens */
+    }
+}
+.profile-pic {
+    /* Ensure this container fits the image and doesn't crop it */
+    width: 100%; /* Fit to the parent's width */
+    height: auto; /* Maintain the aspect ratio */
+    display: flex; /* Use flex to center the image */
+    align-items: center;
+    justify-content: center;
+}
+.profile-pic img { /* Assuming .profile-pic is the class for the img element */
+    max-width: 80%; /* Make the image fill the container */
+    height: auto;
+    border-radius: 15px;
+    height: auto; /* Keep the aspect ratio */
+     /* Make the image round to fit the container */
+}
+
+.profile-card {
+     /* Fixed width; you might want to make this responsive as well */
+   /* Fixed height */
+     /* Ensure the path to your image is correct */
+     /* This will make it round */
+    flex-grow: 1;
+    overflow: hidden; /* This ensures nothing spills out of the border-radius */
+    display: flex; /* Added for centering content, if you have any other content in the profile card */
+    align-items: center; /* Center align the content vertically */
+    justify-content: center; /* Center align the content horizontally */
+    margin-bottom: 0; /* Space below the profile card */
+    flex-direction: column; 
+
+}
+
+.profile-details {
+   
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 0.3rem; /* Reduced margin */
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+}
+.profile-details .role {
+    font-size: 1.4rem; /* Increased font size */
+    margin-bottom: 0; /* Increased margin */
+    color: #ffeaa7; /* Light yellow text */
+    /*font-style: italic; /* Italic text */
+}
+
+
+
+
+.social-icons {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background-color: #fff; /* White background */
+    padding: 1rem; /* Padding around icons */
+    border-radius: 0 0 15px 15px; /* Rounded corners at the bottom */
+    width: 100%; /* Full width */
+    width: calc(100% + 4rem); /* Full width including padding */
+    margin-left: -2rem; /* Adjusts for padding */
+    margin-right: -2rem; /* Adjusts for padding */
+    border-radius: 0; /* Removes rounded corners */
+    margin-top: 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 0.5rem; /* Space between icons */
+    font-size: 2rem;
+     /* Orange color */
+    transition: color 0.3s;
+    margin-top: 0;
+}
+
+.social-icon:hover {
+    color: #e74c3c;
+}
+.about-right {
+    flex: 2;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.greeting {
+    font-size: 3rem;
+    color: #f39c12;
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+.greeting h1 {
+    font-size: 4rem; /* Increased font size */
+    color: #f39c12; /* Orange text */
+    margin-bottom: 0.5rem; /* Reduced margin */
+}
+.intro {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+.buttons {
+    margin-bottom: 1rem; /* Space between buttons and description */
+}
+
+
+
+.resume-button,
+.projects-button {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-button:hover,
+.projects-button:hover {
+    background-color: #e74c3c;
+}
+.description{
+    font-size: 1.4rem; /* Slightly larger font size */
+    color: #f39c12; /* Subtle dark color */
+    line-height: 1.8; /* More space between lines for readability */
+    max-width: 750px; /* Controlled width */
+    text-align: justify; /* Justified text alignment */
+    font-weight: 400; /* Regular font weight */
+    padding: 1rem; /* Padding around the text */
+     /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    margin: 0 auto;
+     /* Subtle shadow */
+}
+/* Other sections */
+/* ... (Add styling for other sections) ... */
+
+/* Dark mode styles */
+/* ... (Add dark mode styles) ... */
+
+/*
+
+/* Sections */
+.section {
+    padding: 8rem 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Set the background color */
+    color: #333;
+}
+
+.section h2 {
+    font-size: 3.5rem;
+    color: #f39c12;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #777;
+}
+/*skills*/
+
+/* Skills Section */
+/* Skills Section */
+.skills-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+.skills-section h2{
+   margin-bottom: 0;
+}
+
+.container {
+            max-width: 2000px;
+            margin: auto;
+            padding: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+            
+            
+
+        }
+        .container h3{
+            text-align: left;
+            margin-bottom: 2%;
+            
+        }
+        .skills-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2%;
+        }
+        .skill-category {
+            flex-basis: 48%; /* Adjust this value to control the width of the columns */
+        }
+        .right-column {
+            flex-basis: 48%;
+        }
+        .tools-others {
+            margin-top: 20px; /* Adjust this value for spacing between language and tools/others */
+        }
+        .skill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size:large;
+        }
+        .stars {
+            display: inline-block;
+            color: black; /* Color for filled stars */
+        }
+        .stars .far {
+            color: lightgray; /* Color for empty stars */
+        }
+       
+         .skill:hover span {
+    font-weight: bold; /* This will make the text turn bold when hovering */
+    color: #333; /* Darker color for the text */
+}
+
+.skill:hover .stars .fas.fa-star {
+    color:gold; /* This will make the filled stars turn yellow when hovering */
+}
+
+/* Optional: You may want to define a default lighter text color and normal font weight */
+.skill span {
+    color: #666; /* Default lighter text color */
+    font-weight: normal; /* Default font weight */
+}
+
+        @media (max-width: 768px) {
+            .skill-category,
+            .right-column {
+                flex-basis: 100%;
+            }
+        }
+/* Add any additional styling rules as needed */
+
+
+/* Add any additional styling rules as needed */
+
+
+/* Experience */
+
+/* Experience Section */
+.experience-section {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    max-width: 60%; 
+    margin: 2rem auto;
+    padding: 0 1rem; /* Adds some padding on the sides */
+  }
+  
+
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between; /* or stretch if you want the children to stretch */
+    margin-bottom: 20px;
+    
+  }
+  
+  .timeline-content {
+    flex-grow: 2; /* Allows the content to grow and take up more space */
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .timeline-content::before {
+    content: '';
+    background: #333;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .job-duration {
+    font-size: 1.2rem;
+    color: #777;
+    margin-right: 20px;
+    flex-grow: 0;
+  }
+  
+  .job-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .company-name {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  .job-description {
+    font-size: 1rem; /* Adjusted for better readability */
+    color: #333; /* A darker color for better contrast */
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6; /* Added line height for better readability */
+    margin-bottom: 1rem; /* Space after the paragraph */
+
+  }
+  
+/* Education*/
+/* Education Section */
+
+/* Education Section */
+.education-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  background: #333;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.course-duration {
+  font-size: 1.2rem;
+  color: #777;
+  margin-right: 20px;
+}
+
+.course-name {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.university-name {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.course-description {
+  font-size: 1rem;
+  color: #777;
+}
+
+
+/* Add responsive styles and other styles as needed */
+
+
+/* Projects */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #fff; /* Assuming a light theme */
+    
+}
+
+/* Swiper container */
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden; 
+}
+
+/* Swiper slide */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px; /* Increase width */
+    height: 100%; /* Increase height */
+    opacity: 0.7; /* Adjust opacity */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition for transform and opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Active slide */
+.swiper-slide-active {
+    opacity: 1; /* Make active slide fully visible */
+    transform: scale(1.1); /* Enlarge active slide */
+}
+
+/* Project card */
+.project-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Card shadow */
+    border-radius: 20px; /* Rounded corners for card */
+    overflow: auto; /* Hide overflow */
+    background: #fff; /* Card background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distribute space */
+    height: 100%;
+    padding: 20px; /* Padding inside the card */
+}
+
+.project-card img {
+    max-width: 80%; /* Adjust if necessary */
+    max-height: 30vh; /* new line - adjust based on viewport height */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem; /* Larger font size for title */
+    color: #333; /* Darker text color */
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: calc(1rem + 0.5vw); /* new line - adjust font size based on viewport width */
+    color: #555;
+    text-align: justify;
+    margin: 0 5px; /* Add some horizontal margin */
+    
+}
+
+/* Navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333; /* Match the color with the text */
+    opacity: 0.8; /* Slightly transparent */
+    transition: opacity 0.2s; /* Smooth transition for hover effect */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+
+/* Contact Form */
+/* Contact Form */
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #f9f9f9;
+    padding: 4rem 1rem;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #f4f4f4;
+    border: none;
+    border-bottom: 2px solid #f39c12;
+    color: #333;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #e74c3c;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.contact-form label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+/* Additional styling for success message */
+.success-message {
+    color: #27ae60; /* Green color */
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+/* Scroll-to-Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark mode styles */
+.dark-mode body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* Dark mode toggle button */
+.toggle-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+}
+
+.toggle-btn:hover {
+    background-color: #f39c12;
+    color: #222;
+}
+/*dark*/
+/* Dark Mode Styles */
+/* General Styles */
+body {
+    /* ... existing styles ... */
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Slightly darker background */
+    color: rgb(204, 204, 204); /* Lighter text */
+}
+.dark-mode .description{
+    color:rgb(204, 204, 204);
+}
+.dark-mode .navbar,
+.dark-mode .header,
+.dark-mode .about-section,
+.dark-mode .section,
+.dark-mode .skills-section,
+.dark-mode .contact-form-section,
+.dark-mode .footer{
+    background-color: #1f1f1f; /* Uniform dark background */
+    transition: background-color 0.5s; /* Smooth transition */
+}
+
+.dark-mode .navbar a,
+.dark-mode .nav-list li a,
+.dark-mode .social-icons a,
+.dark-mode .navigation a {
+    color: #bdbdbd; /* Subtle text color */
+    transition: color 0.5s; /* Smooth transition */
+}
+
+.dark-mode .navbar a:hover,
+.dark-mode .nav-list li a:hover,
+.dark-mode .social-icons a:hover,
+.dark-mode .navigation a:hover {
+    color: #f39c12; /* Accent color on hover */
+}
+.dark-mode .contact-form h2{
+    color: #0f0f0f;
+}
+.dark-mode .resume-button,
+.dark-mode .projects-button {
+    background-color: #f39c12; /* Accent color for buttons */
+    color: #1f1f1f; /* Dark text on buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s; /* Smooth transition */
+}
+
+.dark-mode .resume-button:hover,
+.dark-mode .projects-button:hover {
+    background-color: #e74c3c; /* Different accent color on hover */
+    color: #fff; /* White text on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+}
+
+.dark-mode .name,
+.dark-mode .title,
+.dark-mode .greeting,
+.dark-mode .section h2,
+.dark-mode .contact-form h2 {
+    color: #f39c12; /* Accent color for headings */
+}
+
+.dark-mode .about-left {
+    border: 2px solid #f39c12; /* Accent color border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dark-mode .skill-category h3,
+.dark-mode .about-right .intro,
+.dark-mode .about-right .greeting {
+    color: #e0e0e0; /* Lighter text color */
+}
+
+.dark-mode .toggle-btn {
+    background-color: #f39c12; /* Accent color for toggle button */
+    color: #1f1f1f; /* Dark text on toggle button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s; /* Smooth transition */
+}
+
+.dark-mode .toggle-btn:hover {
+    background-color: #e74c3c; /* Different accent color on hover */
+    color: #fff; /* White text on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+}
+
+body.dark-mode .container h3,
+body.dark-mode .skill span,
+body.dark-mode .contact-form label {
+  color: rgb(204, 204, 204); /* Lighter text color for dark mode */
+}
+body.dark-mode .contact-form h2{
+    color: #000;
+}
+body.dark-mode .stars .fas.fa-star {
+    color: goldenrod; /* Keep stars gold, but you can adjust if you like */
+  }
+  body.dark-mode .stars:hover .fas.fa-star {
+    color: gold; /* Keep stars gold, but you can adjust if you like */
+  }
+  body.dark-mode .stars .far {
+    color: #333333; /* Darker empty stars */
+  }
+/* Dark mode styles for Experience and Education sections */
+body.dark-mode .experience-section,
+body.dark-mode .education-section {
+  background-color: #121212; /* Dark background */
+  color: rgb(204, 204, 204); /* Light text color */
+}
+
+body.dark-mode .timeline-content::before,
+body.dark-mode .timeline-item::before {
+  background: #777; /* Lighter line color for dark mode */
+}
+
+
+body.dark-mode .company-name,
+body.dark-mode .job-description,
+body.dark-mode .university-name,
+body.dark-mode .course-description {
+  color: rgb(204, 204, 204); /* Lighter text color for details in dark mode */
+}
+body.dark-mode .job-duration,
+body.dark-mode .course-duration{
+    color: white;
+}
+body.dark-mode .job-title,
+body.dark-mode .course-name {
+  color: white; /* Light text color for titles in dark mode */
+}
+
+/* Optional: if you have links or other elements inside these sections, you might want to style them too */
+body.dark-mode .timeline a {
+  color: #4ea8de; /* Example link color */
+}
+
+/* If you have buttons or other interactive elements, style them as well */
+body.dark-mode .timeline button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .timeline button:hover {
+  background-color: #555;
+}
+
+/* Media Queries */
+
+/* Footer */
+.footer {
+    background-color: #f9f9f9;
+    color: #888;
+    text-align: center;
+    padding: 2rem 0;
+
+}
+/* media queries*/
+@media (max-width: 992px) {
+    .swiper-slide {
+        width: 300px; /* Adjust the width for smaller screens */
+        height: 400px; /* Adjust the height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+  
+    .hamburger {
+        display: block; /* Show the hamburger menu on small screens */
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+    .nav-list {
+        display: none !important; /* Stack the list items */
+        width: 100%; /* Each list item should take full width */
+        margin: 0; /* Reset any margins */
+        border-bottom: 1px solid #333; /* Keep the separator */
+    }
+    .name {
+        font-size: 1.75rem; /* Smaller font size for tablets */
+        margin-bottom: 0.25rem; /* Reduced bottom margin */
+        letter-spacing: 1px; 
+    }
+
+    .title {
+        font-size: 0.875rem;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-list.open {
+         /* Display the nav list when open */
+        
+         display: flex !important;
+         flex-direction: column;
+         justify-content: center; /* Center items horizontally */
+         align-items: center; 
+         width: 100%; /* Full width */
+         height: 100vh; /* Full height */
+         position: fixed; /* Use fixed to cover the entire viewport */
+         top: 0;
+         left: 0;
+         background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+         z-index: 10;
+         padding: 0; /* Reset padding */
+         margin: 0; /* Reset margin to remove browser default styles */
+         overflow-y: auto; /* In case the list is longer than the s*/
+         list-style: none;
+    }
+    
+    .nav-list li a {
+        padding: 1rem; /* Padding for tap targets */
+        text-align: center; /* Center the text inside the links */
+        display: block; /* Block level for full-width tap/click area */
+        border: none; /* Remove borders */
+        font-size: 1rem; /* Adjust font size */
+}
+    
+    .nav-list li {
+        width: 100%; /* Full width to align with the parent container */
+        margin: 0; /* Reset margins */
+        padding: 10px 0; /* Add some vertical padding */
+        border-bottom: 1px solid #333; /* Add a separator */
+    }
+    
+    .nav-list li a:hover,
+    .nav-list li a:focus {
+        background-color: #f39c12; /* Your theme's highlight color */
+  color: #111; /* Contrast color for the text */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition for smooth color change */
+    }
+    .nav-list li:last-child {
+        border-bottom: none; /* Remove the bottom border for the last item */
+    }
+    /* ... (Adjust other styles as needed) ... */
+    
+    .top-layer {
+        padding: 1rem; /* Less padding for a tighter top bar on smaller screens */
+    }
+    .name-role {
+        font-size: 2rem; /* Slightly smaller to fit new structure */
+    }
+
+    .about-right {
+        padding-left: 2rem; /* Less padding on the left */
+    }
+
+    .greeting {
+        font-size: 2.5rem; /* Smaller greeting font size */
+    }
+
+    .greeting h1 {
+        font-size: 3.5rem; /* Smaller font size for the heading inside greeting */
+    }
+
+    .intro,
+    .description {
+        font-size: 1.6rem; /* Slightly smaller font size for intro and description */
+    }
+    .about-section {
+        flex-direction: column; /* Stack children vertically */
+    }
+    .resume-button,
+    .projects-button {
+        padding: 0.8rem 1.5rem; /* Smaller padding for buttons */
+        font-size: 1rem; /* Smaller font size for button text */
+        margin-right: 0.5rem; /* Less margin to the right of buttons */
+    }
+
+    .social-icons {
+        padding: 0.5rem; /* Less padding around icons */
+        margin-left: 0; /* Resetting margin adjustments */
+        margin-right: 0; /* Resetting margin adjustments */
+    }
+    .about-section {
+        flex-direction: column; /* Stack children vertically */
+    }
+    .about-left{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .swiper-slide {
+        width: 280px; /* Slightly reduce the width */
+        height: 500px;
+         /* Slightly reduce the height */
+    }
+
+    /* Adjust project card styles for smaller screens */
+    .project-card img {
+        max-width: 100%; 
+        /* Allow image to fill the card width */
+    }
+
+    /* Reduce font sizes slightly */
+    .project-card h3 {
+        font-size: 15px;
+    }
+
+    .project-card p {
+        font-size: 10px;
+    }
+    .project-card {
+        padding: 15px;
+        overflow: auto;
+        width: 100%; 
+    
+    }
+    .timeline {
+        max-width: 95%;
+        padding: 0 15px; /* Padding for medium screens */
+      }
+    
+      .timeline-content::before {
+        /* Remove the timeline bar on medium screens */
+        display: none;
+      }
+    
+      .timeline-item {
+        /* Continue with card layout */
+        background: #f9f9f9; /* Light background to match your theme */
+        border-left: 5px solid #f39c12; /* A colored border line on the left side */
+        border-radius: 8px; /* Rounded corners for the cards */
+        box-shadow: 0 2px 10px #f39c12; /* Subtle shadow with a color hint */
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        flex-direction: row;
+        padding: 1.5rem; /* Inner spacing */
+        text-align: left; /* Align text to the left for card layout */
+      }
+      .job-duration,
+  .course-duration {
+    color: #f39c12; /* Use theme color */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Space below duration */
+  }
+
+  .job-title,
+  .course-name {
+    color: #333; /* Darker color for title */
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .company-name,
+  .university-name {
+    color: #666; /* Gray color for company/university name */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .job-description,
+  .course-description {
+    color: #666; /* Gray color for description */
+    font-size: 0.9rem;
+    line-height: 1.4; /* Improved line height for readability */
+  }
+
+
+/* Ensure the timeline content does not exceed the card width */
+.timeline-content {
+  word-wrap: break-word;
+}
+.skill-category, .right-column {
+    flex-basis: 100%; /* Each skill category takes full width on smaller screens */
+  }
+
+  .skills-list {
+    gap: 1rem; /* Reduce gap for smaller screens */
+  }
+  .contact-form {
+    padding: 1.5rem;
+    max-width: 90%; /* Make form width responsive */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    font-size: 1.4rem; /* Adjust font size for medium screens */
+}
+.toggle-btn {
+    font-size: 1rem; /* Smaller font size on tablets */
+    padding: 0.5rem 1rem; /* Smaller padding */
+    bottom: 1.5rem;
+    right: 1.5rem;
+} 
+.section h2 {
+    font-size: 2.5rem; /* Smaller size for medium screens */
+}
+
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-list {
+        justify-content: space-around; /* Better spacing for small screens */
+    }
+
+    .nav-list li {
+        margin: 0; /* Remove margin for very small screens */
+    }
+    
+    .nav-list li a {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding-bottom: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        letter-spacing: 0; /* Reduce letter-spacing for smaller screens */
+    }
+
+    .title {
+        font-size: 0.75rem;
+    }
+    .top-layer {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 0.5rem; /* Even less padding */
+    }
+
+    .name-role {
+        font-size: 1.5rem; /* Even smaller for mobile devices */
+    }
+    .about-left{
+        width: 100%;
+        padding-bottom: 0;
+    }
+   
+    .about-right {
+        width: 100%; /* Full width on smaller screens */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .greeting {
+        font-size: 2rem; /* Even smaller greeting font size */
+    }
+
+    .greeting h1 {
+        font-size: 3rem; /* Even smaller font size for the heading */
+    }
+
+    .intro,
+    .description {
+        font-size: 1.4rem; /* Even smaller font size */
+    }
+
+    .resume-button,
+    .projects-button {
+        padding: 0.5rem 1rem; /* Smaller padding for buttons */
+        font-size: 1rem; /* Smaller font size for button text */
+        margin: 0.5rem 0; /* Adjust margin for stacked buttons */
+    }
+
+    .social-icons {
+        flex-wrap: wrap; /* Allow icons to wrap */
+        padding: 0.5rem; /* Less padding around icons */
+    }
+
+    .social-icon {
+        font-size: 1.5rem; /* Smaller icons on mobile */
+        margin: 0.25rem; /* Less space between icons */
+    }
+    .about-section {
+        flex-direction: column; /* Stack flex children vertically */
+        align-items: center; /* Center the items since they are now stacked */
+    }
+
+    .about-left{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .about-right {
+        width: 100%; /* Full width for both sections */
+        padding: 1rem; /* Adjust the padding */
+        text-align: center; /* Center the text for readability */
+    }
+
+    /* Since they are now stacked, no need for flex-grow on .profile-card */
+    .profile-card {
+        width: 100%;
+         /* Full width */
+        /* Adjust padding, font-sizes, and other properties as needed */
+    }
+
+    /* Adjust the profile image size for small screens */
+    .profile-pic img {
+        max-width: 90%; /* Making the image a bit smaller so it fits nicely */
+        margin-bottom: 1rem; /* Add some space below the image */
+    }
+
+    /* For .about-right, we remove the padding-left as it's now a column layout */
+    .about-right {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 2rem; /* More padding at the bottom */
+    }
+
+    /* Adjust font sizes and margins for smaller screens */
+    .greeting h1 {
+        font-size: 2.5rem; /* Adjust the font size down */
+    }
+
+    .intro,
+    .description {
+        font-size: 1.5rem; /* Adjust the font size down */
+    }
+
+    .resume-button,
+    .projects-button {
+        padding: 0.8rem 1.5rem; /* Adjust padding for smaller screens */
+        font-size: 1rem; /* Adjust the font size */
+        margin: 0 0.5rem 0.5rem 0; /* Adjust margin for smaller screens */
+    }
+
+    /* Adjust social icons as well */
+    .social-icons {
+        padding: 0.5rem; /* Less padding for the icons */
+    }
+
+    .social-icon {
+        font-size: 1.5rem; /* Smaller icons */
+        margin: 0 10px; /* Less space between icons */
+    }
+
+    /* Ensure that the navigation menu (hamburger) is visible and other nav items are perhaps hidden or adjusted for the mobile view */
+    .navigation ul {
+        flex-direction: column; /* Stack the navigation items */
+        align-items: center; /* Center align navigation items */
+        padding: 0; /* Remove padding */
+    }
+
+    .navigation li {
+        margin: 0.5rem 0; /* Add vertical space between menu items */
+    }
+
+    .hamburger {
+        display: block; /* Ensure the hamburger icon is visible */
+    }
+
+    /* Hide the navigation list by default and toggle via JavaScript when hamburger is clicked */
+    .nav-list {
+        display: none; /* Hide the nav list initially */
+    }
+
+    /* Add styles for when the nav-list is toggled to show */
+    .nav-list.active {
+        display: flex; /* Show the nav list */
+    }
+    .swiper-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .swiper-slide {
+        width: 250px; /* Further reduce the width for small screens */
+        height: 100%; /* Further reduce the height for small screens */
+    }
+
+    /* Resize the project card for mobile devices */
+    .project-card {
+        /* Reduce padding */
+        padding: 10px;
+        overflow: auto;
+    }
+
+    /* Resize the image for mobile devices */
+    .project-card img {
+        max-width: 100%; /* Full width of the card */
+        max-height: 20vh; /* Reduce space below image */
+    }
+
+    /* Adjust the size of the text for readability on smaller screens */
+    .project-card h3 {
+        font-size: 2.5vw; /* Reduce title font size */
+    }
+
+    .project-card p {
+        font-size: 2vw; /* Reduce paragraph font size */
+        overflow-y: auto;
+       
+    }
+   
+    /* Adjust navigation buttons on mobile */
+    .swiper-button-prev,
+    .swiper-button-next {
+        transform: scale(0.75); /* Make buttons smaller */
+    }
+    .timeline {
+        max-width: 100%;
+        padding: 0 15px; /* Padding for smaller screens */
+      }
+    
+      .timeline-content::before {
+        /* Remove the timeline bar on small screens */
+        display: none;
+      }
+    
+      .timeline-item {
+        /* Convert to card layout */
+        background: #f9f9f9; /* Light background to match your theme */
+        border-left: 5px solid #f39c12; /* A colored border line on the left side */
+        border-radius: 8px; /* Rounded corners for the cards */
+        box-shadow: 0 2px 10px #f39c12;/* Subtle shadow with a color hint */
+        margin-bottom: 1.5rem;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 1rem; /* Inner spacing */
+        text-align: left; /* Align text to the left for card layout */
+      }
+      .container {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 0 10px;
+      }
+    
+      .skills-list {
+        justify-content: center; /* Center skills list on very small screens */
+      }
+    
+      .skill {
+        font-size: medium; /* Adjust font size for very small screens */
+      }
+      .contact-form-section {
+        padding: 2rem 1rem; /* Less padding on small screens */
+    }
+
+    .contact-form {
+        max-width: 100%; /* Make form take full width on small screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+    success-message {
+        color: #27ae60;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    .toggle-btn {
+        font-size: 0.8rem; /* Even smaller font size on mobile phones */
+        padding: 0.4rem 0.8rem; /* Even smaller padding */
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .section h2 {
+        font-size: 1.75rem; /* Even smaller size for small screens */
+        margin-bottom: 1.5rem; /* Less margin for tighter spaces */
+        letter-spacing: 1px; /* Reduced letter-spacing for small screens */
+    }
+    }
